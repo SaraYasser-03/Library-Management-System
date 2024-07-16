@@ -2,7 +2,7 @@
 
 namespace LibraryManagementSystem
 {
-    public class Member
+    public class Member: Person
     {
         public string Name {  get; set; }
         public int MemberId {  get; set; }
