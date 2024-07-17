@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.Linq;
 
 namespace LibraryManagementSystem
 {
-    public class Book:Iborrowable
+    public class Book:IBorrowable
     {
         private string title;
         private string author;
         private long isbn;
-        public bookStatus Status { get; set; }
-
+        public BookStatus Status { get; set; }
 
         public Book(string title, string author, long isbn)
         {
@@ -39,16 +36,9 @@ namespace LibraryManagementSystem
             Console.WriteLine($"Author:{Author}");
             Console.WriteLine($"ISBN: {Isbn}");
         }
-        public enum bookStatus
-        {
-            Available,
-            Borrowed,
-            Reserved
-        }
-
         public void borrowBook()
         {
-            //book.Status = bookStatus.Borrowed;
+            this.Status = BookStatus.Borrowed;
             Console.WriteLine("Book is borrowed");
         }
 

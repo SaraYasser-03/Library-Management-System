@@ -15,8 +15,9 @@ namespace LibraryManagementSystem
             library2.addBook(book2);
             var combLib = library + library2;
             combLib.displayAllBooks();
-
-            //            library.displayAllBooks();
+            book1.borrowBook();
+            Console.WriteLine(book1.Status);
+            //library.displayAllBooks();
             //library.findBookByIsbn(11111);
             //book.displayBookDetails();
             Console.WriteLine(Library.LibraryStatistics.totalNumberOfBooks(library));

@@ -2,7 +2,7 @@
 
 namespace LibraryManagementSystem
 {
-    interface Iborrowable
+    interface IBorrowable
     {
         void borrowBook();
         void returnBook();
